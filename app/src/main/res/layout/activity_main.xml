@@ -8,169 +8,192 @@
 
     <TextView
         android:id="@+id/titulo"
-        android:layout_width="60dp"
-        android:layout_height="14dp"
-        android:layout_marginTop="86dp"
-        android:text="Calculadora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALCULADORA"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.092" />
+
+
+    <Button
+        android:id="@+id/btn7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn8"
+        app:layout_constraintEnd_toStartOf="@+id/btn8"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnSuma"
+        app:layout_constraintEnd_toStartOf="@+id/btnSuma"
+        app:layout_constraintStart_toEndOf="@+id/btn8" />
+
+    <Button
+        android:id="@+id/btnSuma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/btnResta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn9"
+        app:layout_constraintTop_toBottomOf="@+id/txtResultado"  />
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn5"
+        app:layout_constraintEnd_toStartOf="@+id/btn5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6"
+        app:layout_constraintEnd_toStartOf="@+id/btnResta"
+        app:layout_constraintStart_toEndOf="@+id/btn5"
+        app:layout_constraintTop_toBottomOf="@+id/btn9" />
+
+    <Button
+        android:id="@+id/btnResta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@+id/btnMultiplicar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn6"
+        app:layout_constraintTop_toBottomOf="@+id/btnSuma" />
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn2"
+        app:layout_constraintEnd_toStartOf="@+id/btn2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn3"
+        app:layout_constraintEnd_toStartOf="@+id/btn3"
+        app:layout_constraintStart_toEndOf="@+id/btn1"/>
+
+    <Button
+        android:id="@+id/btn8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8"
+        app:layout_constraintEnd_toStartOf="@+id/btn9"
+        app:layout_constraintStart_toEndOf="@+id/btn7"
+        app:layout_constraintTop_toTopOf="@+id/btn9"  />
+
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn6"
+        app:layout_constraintEnd_toStartOf="@+id/btn6"
+        app:layout_constraintStart_toEndOf="@+id/btn4" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnMultiplicar"
+        app:layout_constraintEnd_toStartOf="@+id/btnMultiplicar"
+        app:layout_constraintStart_toEndOf="@+id/btn2"/>
+
+    <Button
+        android:id="@+id/btnMultiplicar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        app:layout_constraintBottom_toTopOf="@+id/btnDivision"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn3"
+        app:layout_constraintTop_toBottomOf="@+id/btnResta" />
+
+    <Button
+        android:id="@+id/btn0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnResult"
+        app:layout_constraintEnd_toStartOf="@+id/btnResult"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESULT"
+        app:layout_constraintEnd_toStartOf="@+id/btnBorrar"
+        app:layout_constraintStart_toEndOf="@+id/btn0"
+        app:layout_constraintTop_toBottomOf="@+id/btn2"/>
+
+    <Button
+        android:id="@+id/btnBorrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BORRAR"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnResult"
+        app:layout_constraintEnd_toStartOf="@+id/btnDivision"
+        app:layout_constraintStart_toEndOf="@+id/btnResult" />
+
+    <Button
+        android:id="@+id/btnDivision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:text="/"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnBorrar"
+        app:layout_constraintTop_toBottomOf="@+id/btnMultiplicar" />
+
+    <TextView
+        android:id="@+id/txtNumeros"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginBottom="16dp"
+        android:text=""
+        android:textAlignment="viewEnd"
+        app:layout_constraintBottom_toTopOf="@+id/txtResultado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txTotal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="41dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo" />
-
-    <TextView
-        android:id="@+id/txNumero"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txTotal" />
-
-    <TableLayout
-        android:layout_width="409dp"
-        android:layout_height="213dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/btn7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="7" />
-
-            <Button
-                android:id="@+id/btn8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="8" />
-
-            <Button
-                android:id="@+id/btn9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="9" />
-
-            <Button
-                android:id="@+id/btnSuma"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/btn4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="4" />
-
-            <Button
-                android:id="@+id/btn5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="5" />
-
-            <Button
-                android:id="@+id/btn6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="6" />
-
-            <Button
-                android:id="@+id/btnResta"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/btn1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1" />
-
-            <Button
-                android:id="@+id/btn2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2" />
-
-            <Button
-                android:id="@+id/btn3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3" />
-
-            <Button
-                android:id="@+id/btnMultiplicar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="*" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/btn0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <Button
-                android:id="@+id/btnrRes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="RESULT" />
-
-            <Button
-                android:id="@+id/btnBorrar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="BORRAR" />
-
-            <Button
-                android:id="@+id/btnDivision"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="/" />
-        </TableRow>
-
-    </TableLayout>
-
-    <TextView
-        android:id="@+id/txError"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="84dp"
-        tools:layout_editor_absoluteY="507dp" />
+        android:id="@+id/txtResultado"
+        android:layout_width="280dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="24dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/btnSuma"
+        app:layout_constraintEnd_toEndOf="@+id/btn8"
+        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintStart_toStartOf="@+id/btn8"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumeros" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
